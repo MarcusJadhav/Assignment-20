@@ -1,39 +1,77 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sidebar</title>
-    <link rel="stylesheet" href="./sidebar.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <div class="container">
 
         <div class="sidebar">
-            <a class="menu-items" href="">
+            <a class="menu-items active-menu" href="./sidebar.html">
                 <img src="./images/home-logo.png" class="menu-img">
                 <span class="menu-text">Home</span>
             </a>
 
-            <a class="menu-items" href="">
-                <img src="./images/blog-logo.png" class="menu-img">
-                <span class="menu-text">Blog</span>
+            <a class="menu-items" href="./pages/mobile.html">
+                <img src="./images/smartphone.png" class="menu-img">
+                <span class="menu-text">Mobiles</span>
             </a>
 
-            <a class="menu-items" href="">
-                <img src="./images/gallery-logo.png" class="menu-img">
-                <span class="menu-text">Gallery</span>
+            <a class="menu-items" href="./pages/laptop.html">
+                <img src="./images/laptop.png" class="menu-img">
+                <span class="menu-text">Laptops</span>
             </a>
 
-            <a class="menu-items" href="">
-                <img src="./images/contact-logo.png" class="menu-img">
-                <span class="menu-text">Contact</span>
+            <a class="menu-items" href="./pages/headphone.html">
+                <img src="./images/headphones.png" class="menu-img">
+                <span class="menu-text">Headphones</span>
             </a>
         </div>
 
         <div class="content">
-            Content
-        </div>
+            <div class="product-cards">
+                <img class="product-img home"
+                    src="data:image/jpeg;base64,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"
+                    alt="mobile-img">
+                <h1 class="product-text">Mobiles</h1>
+            </div>
 
+            <div class="product-cards">
+                <img class="product-img home"
+                    src="https://cdn.mos.cms.futurecdn.net/QF3FAzoDwqXLqtj88WFSYT-970-80.jpg.webp" alt="mobile-img">
+                <h1 class="product-text">Laptops</h1>
+            </div>
+
+            <div class="product-cards">
+                <img class="product-img home"
+                    src="https://cdn.mos.cms.futurecdn.net/KrP98piVn8pdRpbDAEHkbT-970-80.jpg.webp" alt="mobile-img">
+                <h1 class="product-text">Headphones</h1>
+            </div>
+
+            <div class="footer" >
+                <a class="footer-items" href="./sidebar.html">
+                    <img src="./images/home-logo.png" class="footer-img" />
+                </a>
+
+                <a class="footer-items" href="./pages/mobile.html">
+                    <img src="./images/smartphone.png" class="footer-img" />
+                </a>
+
+                <a class="footer-items" href="./pages/laptop.html">
+                    <img src="./images/laptop.png" class="footer-img" />
+                </a>
+
+                <a class="footer-items" href="./pages/headphone.html">
+                    <img src="./images/headphones.png" class="footer-img" />
+                </a>
+            </div>
+        </div>
+       
     </div>
 </body>
+
 </html>
